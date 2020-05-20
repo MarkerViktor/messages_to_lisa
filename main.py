@@ -1,5 +1,6 @@
 from vk_api import vk_api
 from datetime import datetime
+from time import sleep
 import random
 
 token_dict = {
@@ -41,6 +42,7 @@ def get_phrase():
 
 
 while True:
+    sleep(10)
     time = datetime.now()
     print(time)
     for user in users_list:
