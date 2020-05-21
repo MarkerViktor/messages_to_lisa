@@ -28,7 +28,7 @@ class User:
             random_id=random.randint(0, 9999999999)
         )
         self.is_sent = True
-        self.next_hour = random.randint(12, 14)
+        self.next_hour = random.randint(5, 7)
         self.next_minute = random.randint(0, 60)
 
 
@@ -42,14 +42,16 @@ def get_phrase():
 
 
 while True:
-    sleep(10)
     time = datetime.now()
-    time = datetime(time.year, time.month, time.day, time.hour + 8)
     print(time)
     for user in users_list:
         if time.hour == user.next_hour and time.minute == user.next_minute:
-            user.send_temperature()
+            try:
+                user.send_temperature()
+            except Exception as exception:
+                print(exception)
 
     if time.hour == 0 and time.minute == 0:
         for user in users_list:
-            user.is_sent = False;
+            user.is_sent = False
+    sleep(10)
