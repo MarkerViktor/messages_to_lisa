@@ -44,7 +44,7 @@ def get_phrase():
 while True:
     sleep(10)
     time = datetime.now()
-    time = datetime(time.year, time.month, time.day, time.hour + 7)
+    time = datetime(time.year, time.month, time.day, time.hour + 8)
     print(time)
     for user in users_list:
         if time.hour == user.next_hour and time.minute == user.next_minute:
