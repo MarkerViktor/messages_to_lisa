@@ -5,15 +5,14 @@ import random
 
 token_dict = {
     'Victor': '883af3386ebd9f77473891bc08a2b28c2ca9a402846427a79bbed84e5dfcba96b25531898bf78fbe82db0',
-    #'Misha': ''
 }
 
 temperature_list = [
     "Привеет, {} сегодня",
     "Привет, всё хорошо с температурой",
-    "Привет, мы живы)",
     "Привет, {} на градуснике",
     "Добрый день, температура {}",
+    "Привет, {} температура)",
 ]
 
 
@@ -27,7 +26,7 @@ class User:
 
     def send_temperature(self):
         self.api.messages.send(
-            peer_id=94138203,
+            peer_id=204254792,
             message=get_phrase(),
             random_id=random.randint(0, 9999999999)
         )
