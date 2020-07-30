@@ -4,7 +4,7 @@ from time import sleep
 import random
 
 token_dict = {
-    'Victor': '883af3386ebd9f77473891bc08a2b28c2ca9a402846427a79bbed84e5dfcba96b25531898bf78fbe82db0',
+    'Victor': '',
 }
 
 temperature_list = [
